@@ -5,5 +5,10 @@ using UnityEngine;
 public class Meat : Item
 {
     public enum howDone {rare, mediumRare, Done, WellDone}
+    public enum meatType
+    {
+        mystery,chicken, fish
+    }
     public howDone meDone;
+    public meatType type;
 }
