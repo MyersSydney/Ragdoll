@@ -6,4 +6,5 @@ public class Recipe : ScriptableObject
 {
     public Item[] items;
     public Item createdItem;
+
 }
