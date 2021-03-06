@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public float initialMoney = 500f;
     [SerializeField]
     Transform spawnPoint;
+    [SerializeField]
+    GameObject customer;
     public static GameManager instance;
     public bool isPlaying = true;
     // Start is called before the first frame update
@@ -32,6 +34,10 @@ public class GameManager : MonoBehaviour
         {
             spawnPoint = GameObject.FindGameObjectWithTag("customerSpawn").transform;
         } 
+        if(isPlaying)
+        {
+            spawnCustomer();
+        }
     }
     void NormalizeValues()
     {
@@ -42,7 +48,7 @@ public class GameManager : MonoBehaviour
     }
     void spawnCustomer()
     {
-
+        Instantiate(customer, spawnPoint.position, Quaternion.identity);
     }
     public void ModifyRating(Item i, float time)
     {
