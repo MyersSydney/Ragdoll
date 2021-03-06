@@ -5502,10 +5502,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5080720603574229107, guid: bb2ab852ae742344e8deca9d2816f3fb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 580f2895ad27df84da9db6ff95f88a06, type: 2}
     - target: {fileID: 6253657809449329436, guid: bb2ab852ae742344e8deca9d2816f3fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.41
@@ -5611,10 +5607,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: chickenpatty
       objectReference: {fileID: 0}
-    - target: {fileID: 8316376326160475557, guid: 37c59363e748f9e4890e7a6c90cb0f3c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7879b734648f7bd4a9b4664bddcfbcfc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c59363e748f9e4890e7a6c90cb0f3c, type: 3}
 --- !u!1001 &7400244743828184899
@@ -5843,9 +5835,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9073527568856372474, guid: c74d2f41820e1cc4fb8abc7905aed4b7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 68ef75f37141ba845b25a189e26ce754, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c74d2f41820e1cc4fb8abc7905aed4b7, type: 3}
