@@ -21,9 +21,11 @@ public class drivethru : MonoBehaviour
             if (CheckBox(collision.collider.gameObject.GetComponent<box>().items)) {
                 //good box
                 print("This was a good box");
+                GameManager.customers.Peek().GetComponent<Customer>().isSated = true;
             } else {
                 //bad box
                 print("This was a bad box");
+                GameManager.customers.Peek().GetComponent<Customer>().isAngry = true;
             }
             GameManager.instance.NextOrder();
             Destroy(collision.collider.gameObject);    

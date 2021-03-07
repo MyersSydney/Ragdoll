@@ -142,7 +142,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void NextOrder() {
         if (customers.Count > 1) {
-            customers.Dequeue();
             BeginOrder();
         }
     }
