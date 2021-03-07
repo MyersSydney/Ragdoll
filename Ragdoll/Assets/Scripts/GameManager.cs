@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     GameObject customer;
     public static GameManager instance;
     public bool isPlaying = true;
+    public bool waiting = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         } 
         if(isPlaying)
         {
+            if(waiting)
             spawnCustomer();
         }
     }
