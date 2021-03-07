@@ -16,6 +16,6 @@ MonoBehaviour:
   description: 
   points: 0
   quality: 0
-  price: 0
+  price: 2
   meDone: 0
   type: 2
