@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 8706378849921105593}
   m_Layer: 0
   m_Name: Cup
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,8 +267,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8329572176096470019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 2.17, z: -1.0705466}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.41, y: 91.63, z: 114.39}
+  m_LocalScale: {x: 90.45852, y: 90.45852, z: 90.45864}
   m_Children:
   - {fileID: 2549962735236350819}
   - {fileID: 2511378458069977987}
