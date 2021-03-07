@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     public float chanceSpawnMax = 100;
     public float downTime = 30;
     public int maxCustomers = 5;
-    public Queue<GameObject> customers = new Queue<GameObject>();
+    [SerializeField]
+    public static Queue<GameObject> customers = new Queue<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +45,11 @@ public class GameManager : MonoBehaviour
         } 
         if(isPlaying)
         {
-            if(Random.Range(chanceSpawnMin, chanceSpawnMax) < 2 && isSpawning)
+           /* if(Random.Range(chanceSpawnMin, chanceSpawnMax) < 2 && isSpawning)
             {
                 isSpawning = !isSpawning;
                 print(isSpawning);
-            }
+            }*/
             //if the customers are spawning and are less than the max number of spawned customers
             //Have yet to implement the limiting of customers
             //will store alive customers in a Queue and then release them as the orders are processed
@@ -89,8 +90,10 @@ public class GameManager : MonoBehaviour
     }
     void spawnCustomer()
     {
-        GameObject obj = Instantiate(customer, spawnPoint.position, Quaternion.identity);
+        GameObject obj = Instantiate(customer, spawnPoint.position, this.transform.localRotation);
+        print(obj);
         customers.Enqueue(obj);
+        print(customers.Peek());
         waiting = true;
     }
     public void ModifyRating(Item i, float time)

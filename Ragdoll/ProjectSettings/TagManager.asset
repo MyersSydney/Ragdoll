@@ -10,6 +10,8 @@ TagManager:
   - FryButton
   - GoPoint
   - customerSpawn
+  - customer
+  - theBeyond
   layers:
   - Default
   - TransparentFX

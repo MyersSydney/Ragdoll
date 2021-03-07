@@ -254,8 +254,52 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &467174869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467174870}
+  - component: {fileID: 467174871}
+  m_Layer: 0
+  m_Name: Graveyard
+  m_TagString: theBeyond
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467174870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467174869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 167.21136, y: 9.140783, z: 274.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &467174871
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467174869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.77
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &590794647
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,12 +428,12 @@ MonoBehaviour:
   initialKelp: 0.5
   initialMoney: 500
   spawnPoint: {fileID: 0}
-  customer: {fileID: 5315144498901806423, guid: 34cd0e9d1fad51e46a72c1dbebdf7a06, type: 3}
+  customer: {fileID: 4293926133991764339, guid: d77e35fcc3fe3a144bf761f719a9ebc0, type: 3}
   isPlaying: 1
   waiting: 0
   isSpawning: 1
   chanceSpawnMin: 1
-  chanceSpawnMax: 10000
+  chanceSpawnMax: 100
   downTime: 30
   maxCustomers: 5
 --- !u!4 &1158386769
@@ -404,7 +448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442723785
 GameObject:
@@ -417,7 +461,7 @@ GameObject:
   - component: {fileID: 1442723786}
   m_Layer: 0
   m_Name: spawnPoint
-  m_TagString: GoPoint
+  m_TagString: customerSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024593732
 GameObject:
@@ -446,8 +490,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2024593733}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: customerSpawn
+  m_Name: driveThruWindow
+  m_TagString: GoPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,9 +504,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024593732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -345.10272, y: -130.1, z: 123.14559}
+  m_LocalPosition: {x: 167.21136, y: 9.140783, z: 208.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
