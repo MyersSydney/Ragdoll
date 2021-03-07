@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f46f771724e404bb7e832630d2198b, type: 3}
   m_Name: Cheese
   m_EditorClassIdentifier: 
-  myName: 
+  myName: Cheese
   description: 
   points: 0
   quality: 0

@@ -12,6 +12,7 @@ TagManager:
   - customerSpawn
   - customer
   - theBeyond
+  - Stove
   layers:
   - Default
   - TransparentFX
