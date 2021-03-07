@@ -154,6 +154,7 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 88.24
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 1717728669382285022, guid: 0685b887d1a02aa4d99c6c6a0f8c896e, type: 3}
       propertyPath: m_margin.z
       value: 0.30261543
@@ -186,6 +187,8 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 1717728670012526123, guid: 0685b887d1a02aa4d99c6c6a0f8c896e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -717.4
@@ -3959,7 +3962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fry: {fileID: 7780872964002735770, guid: a5777eac03882f14381a6543f73012e4, type: 3}
-  price: 0
+  price: 5
   spawn: {fileID: 1048243926}
 --- !u!65 &1196715062
 BoxCollider:
