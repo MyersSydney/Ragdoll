@@ -18,6 +18,8 @@ public class Customer : MonoBehaviour
     public float patienceMin = 100;
     public float patienceTimer;
     float modifier;
+    [SerializeField]
+    public LayerMask custard;
     AudioSource audio;
     void Start()
     { 
@@ -51,6 +53,15 @@ public class Customer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,30, custard))
+        {
+            print(hit);
+/*            if(hit.collider.CompareTag("customer"))
+            {*/
+                moving = false;
+           /* }*/
+        }
         if ((patienceTimer <= 0 && !isSated) || isAngry)
         {
             isAngry = true;
@@ -98,7 +109,7 @@ public class Customer : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("customer"))
         {
