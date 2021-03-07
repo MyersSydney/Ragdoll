@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21e0a8d95d326a143a7bdfbc839f54bb
+guid: 1d2ee4c88c75f2e4eacaf7bba59e8f92
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Youtube Star
+  - GOOD PEOPLE
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
