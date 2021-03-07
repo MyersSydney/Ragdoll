@@ -19,7 +19,7 @@ public class TitleScreen : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene("Adam Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("AdamScene", LoadSceneMode.Single);
     } 
 
     public void quitGame()
