@@ -11,10 +11,10 @@ public class GameManager : MonoBehaviour
     public float personTimer;
     public float initialKelp = 0.5f;
     public float initialMoney = 500f;
-    [SerializeField]
-    Transform spawnPoint;
-    [SerializeField]
-    GameObject customer;
+    //[SerializeField]
+    //Transform spawnPoint;
+    //[SerializeField]
+    //GameObject customer;
     public static GameManager instance;
     public bool isPlaying = true;
     public bool waiting = true;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(spawnPoint == null && isPlaying)
         {
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             if(waiting)
             spawnCustomer();
         }
-    }
+    } */
     void NormalizeValues()
     {
         kelpRating = initialKelp;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
     void spawnCustomer()
     {
-        Instantiate(customer, spawnPoint.position, Quaternion.identity);
+        //Instantiate(customer, spawnPoint.position, Quaternion.identity);
     }
     public void ModifyRating(Item i, float time)
     {
