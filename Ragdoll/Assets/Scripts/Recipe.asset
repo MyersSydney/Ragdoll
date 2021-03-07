@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d587333475538494b99752044cd6038c, type: 3}
   m_Name: Recipe
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 3d39af689edbe51468209eb9da6b1c4d, type: 2}
+  - {fileID: 11400000, guid: 3d39af689edbe51468209eb9da6b1c4d, type: 2}
+  - {fileID: 11400000, guid: 3d39af689edbe51468209eb9da6b1c4d, type: 2}
+  - {fileID: 11400000, guid: 3d39af689edbe51468209eb9da6b1c4d, type: 2}

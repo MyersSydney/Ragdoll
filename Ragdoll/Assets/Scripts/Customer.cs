@@ -11,6 +11,7 @@ public class Customer : MonoBehaviour
     public bool moving = true;
     public float speed = 10;
     public bool isSated = false;
+    public bool useOnce = false;
     void Start()
     {
         goPoint = GameObject.FindGameObjectWithTag("GoPoint").transform;
@@ -26,9 +27,12 @@ public class Customer : MonoBehaviour
         }
         if(isSated)
         {
-            transform.position = Vector3.MoveTowards(this.gameObject.transform.position, theGreatBeyond.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(this.gameObject.transform.position, theGreatBeyond.position, speed * Time.deltaTime);   
+        }
+        if(!useOnce && isSated) {
             GameManager.customers.Dequeue();
             Invoke("letsEndThis", 30f);
+            useOnce = true;
         }
     }
     private void letsEndThis()
