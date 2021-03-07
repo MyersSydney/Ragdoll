@@ -1736,6 +1736,10 @@ PrefabInstance:
       propertyPath: bad
       value: 
       objectReference: {fileID: 8300000, guid: da2a4bd28b2403a44bd5c7b67c9b9298, type: 3}
+    - target: {fileID: 7177058539738284131, guid: 4370807c07e93fe49b1db86a02ca89e2, type: 3}
+      propertyPath: whiteBoardText
+      value: 
+      objectReference: {fileID: 724586646}
     - target: {fileID: 7177058539738284156, guid: 4370807c07e93fe49b1db86a02ca89e2, type: 3}
       propertyPath: m_Name
       value: GameManager

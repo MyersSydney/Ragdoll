@@ -122,6 +122,16 @@ public class GameManager : MonoBehaviour
         }
         return r;
     }
+
+    /// <summary>
+    /// Shows the whiteboard the current order from the beginning of the queue
+    /// </summary>
+    public void BeginOrder() {
+        GameObject obj = customers.Peek().gameObject;
+        for (int i = 0; i < obj.GetComponent<Customer>().currentRecipe.items.Count; i++) {
+            whiteBoardText.text += obj.GetComponent<Customer>().currentRecipe.items[i].ToString() + " ";
+        }
+    }
     void spawnCustomer()
     {
         int i = Random.Range(0, myCustomers.Length - 1);
