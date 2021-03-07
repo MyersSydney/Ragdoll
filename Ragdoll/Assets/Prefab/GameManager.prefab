@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7177058539738284156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7177058539738284130}
+  - component: {fileID: 7177058539738284131}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7177058539738284130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177058539738284156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7177058539738284131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177058539738284156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae5b86e36a06ff4bb80a3e56f25cd61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  currentMoney: 0
+  kelpRating: 0.5
+  personTimer: 0
+  initialKelp: 0.5
+  initialMoney: 500
+  spawnPoint: {fileID: 0}
+  customer:
+  - {fileID: 2877263614517002543, guid: 97bd8ea2a93c2dc43a65c08dc4b36ed9, type: 3}
+  - {fileID: 6156067390751335161, guid: 743427f757026be4e9c28ab5835221c0, type: 3}
+  - {fileID: 7780349476855831941, guid: 2dfc2b10117510841ad7db653d1038c1, type: 3}
+  - {fileID: 642459720904847665, guid: 78407a9c5857b95448d071fd73e5e639, type: 3}
+  - {fileID: 5173695491658745935, guid: ad47893a2dbd0dd4ab83bccaefa625b5, type: 3}
+  isPlaying: 1
+  waiting: 0
+  isSpawning: 1
+  chanceSpawnMin: 1
+  chanceSpawnMax: 100
+  downTime: 30
+  maxCustomers: 5
+  recipes: []
+  ingredients:
+  - {fileID: 11400000, guid: 306469f6cc54bae4a8c54057f3514ee1, type: 2}
+  - {fileID: 11400000, guid: 7e9a2dbcd877d3542a2548d7aa8c3e64, type: 2}
+  - {fileID: 11400000, guid: 3d39af689edbe51468209eb9da6b1c4d, type: 2}
+  - {fileID: 11400000, guid: 54fbce19bb6a6ce48a29b0dde15ca785, type: 2}
+  - {fileID: 11400000, guid: 57d4071eede0fa24db7fa41ad5327772, type: 2}
+  - {fileID: 11400000, guid: 0c4faf954dee00943acaadc33d21ae70, type: 2}
+  - {fileID: 11400000, guid: 48dd51933a893a34f87a140d96691191, type: 2}
+  bun:
+  - {fileID: 11400000, guid: 54fbce19bb6a6ce48a29b0dde15ca785, type: 2}
+  - {fileID: 11400000, guid: 9aacb3c6c9a7f424994617b15793d968, type: 2}
+  meats:
+  - {fileID: 11400000, guid: d3a221edfca93de43958b13dd788377b, type: 2}
+  - {fileID: 11400000, guid: c71ccba824b03ae40850bfe16fd67095, type: 2}
+  - {fileID: 11400000, guid: 0fefb7fc36ca0b7468b8fbd4a53c2ff8, type: 2}
+  bad: {fileID: 8300000, guid: da2a4bd28b2403a44bd5c7b67c9b9298, type: 3}
+  good: {fileID: 8300000, guid: 38e166fa3f1800d4082209d7bb5886b0, type: 3}
+  custArrive: {fileID: 8300000, guid: db7bb878334d3d243bf231c48366a8a1, type: 3}
