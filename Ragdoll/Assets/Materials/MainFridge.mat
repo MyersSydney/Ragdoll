@@ -35,7 +35,7 @@ Material:
     - _FresnelBrightness: 0
     - _FresnelPower: 0
     - _FresnelShadowDropoff: 0
-    - _HighIntensity: 1.5
+    - _HighIntensity: 1.04
     - _LightScalar: 1
     - _LowIntensity: 2.04
     - _OutlineSize: 13.14
