@@ -51,6 +51,9 @@ public class pickUpObjects : MonoBehaviour
                     } else if (hit.collider.gameObject.CompareTag("meatFridge")) {
                         GameObject obj = hit.collider.gameObject;
                         obj.GetComponent<meatFridge>().PurchaseItem();
+                    } else if (hit.collider.gameObject.CompareTag("BoxButton")) {
+                        GameObject obj = hit.collider.gameObject;
+                        obj.GetComponent<boxMachine>().SpawnBox();
                     }
                 } 
             } else { //Drop item
