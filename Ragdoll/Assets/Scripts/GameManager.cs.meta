@@ -6,6 +6,9 @@ MonoImporter:
   defaultReferences:
   - spawnPoint: {instanceID: 0}
   - customer: {fileID: 4293926133991764339, guid: d77e35fcc3fe3a144bf761f719a9ebc0, type: 3}
+  - bad: {fileID: 8300000, guid: da2a4bd28b2403a44bd5c7b67c9b9298, type: 3}
+  - good: {fileID: 8300000, guid: 38e166fa3f1800d4082209d7bb5886b0, type: 3}
+  - custArrive: {fileID: 8300000, guid: db7bb878334d3d243bf231c48366a8a1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

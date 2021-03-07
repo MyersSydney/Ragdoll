@@ -26,8 +26,22 @@ public class GameManager : MonoBehaviour
     public int maxCustomers = 5;
     [SerializeField]
     public static Queue<GameObject> customers = new Queue<GameObject>();
+    [SerializeField]
+    Recipe[] recipes;
+    [SerializeField]
+    Item[] ingredients;
+    [SerializeField]
+    Item[] bun;
+    [SerializeField]
+    Item[] meats;
+    [SerializeField]
+    public AudioClip bad;
+    [SerializeField]
+    public AudioClip good;
+    [SerializeField]
+    public AudioClip custArrive;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance == null)
             instance = this;
@@ -88,15 +102,29 @@ public class GameManager : MonoBehaviour
         currentMoney = money;
 
     }
+    public Recipe GetRecipe()
+    {
+        return recipes[Random.Range(0, recipes.Length)];
+    }
+    public Recipe CreateOrder()
+    {
+        Recipe r = (Recipe)ScriptableObject.CreateInstance("Recipe");
+        int max = Random.Range(5, 10);
+        r.items.Add(bun[Random.Range(0, bun.Length)]);
+        r.items.Add(meats[Random.Range(0, meats.Length)]);
+        for (int i = 0; i < max; i++)
+        {
+            r.items.Add(ingredients[Random.Range(0, ingredients.Length)]);
+        }
+        return r;
+    }
     void spawnCustomer()
     {
         GameObject obj = Instantiate(customer, spawnPoint.position, this.transform.localRotation);
-        print(obj);
         customers.Enqueue(obj);
-        print(customers.Peek());
         waiting = true;
     }
-    public void ModifyRating(Item i, float time)
+    public void ModifyRating(Item i, float time, bool isMeat)
     {
         switch (i.quality)
         {
@@ -111,10 +139,7 @@ public class GameManager : MonoBehaviour
 
                 break;
             case Item.Quality.good:
-                if (i.GetType() == typeof(Meat))
-                {
 
-                }
                 break;
             case Item.Quality.poor:
 
