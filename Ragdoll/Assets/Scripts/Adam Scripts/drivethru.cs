@@ -5,12 +5,23 @@ using UnityEngine;
 public class drivethru : MonoBehaviour
 {
     public List<Item> newItems = new List<Item>();
+    public Recipe recipe;
+
+    private void Start() {
+        StartList(recipe.items);
+    }
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.gameObject.layer == 12) {
             //if it is a box
-            StartList(GameManager.instance.customers.Peek().GetComponent<Customer>().currentRecipe.items);
-            CheckBox(collision.collider.gameObject.GetComponent<box>().items);
+            if (CheckBox(collision.collider.gameObject.GetComponent<box>().items)) {
+                //good box
+                print("This was a good box");
+            } else {
+                //bad box
+                print("This was a bad box");
+            }
             Destroy(collision.collider.gameObject);
+            //newItems.Clear();
         }
     }
 
@@ -19,10 +30,20 @@ public class drivethru : MonoBehaviour
             newItems.Add(items[i]);
         }
     }
-
     public bool CheckBox(List<Item> items) {
-        for(int i = 0; i < GameManager.instance.customers.Peek().GetComponent<Customer>().currentRecipe.items.Count; i++) {
-            
+        for(int i = 0; i < items.Count; i++) {
+            for(int j = 0; j < newItems.Count; j++) {
+                if(items[i] == newItems[j]) {
+                    newItems.RemoveAt(j);
+                    break;
+                }
+            }
+        }
+
+        if(newItems.Count == 0) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
