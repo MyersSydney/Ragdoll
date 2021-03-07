@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Transform spawnPoint;
     [SerializeField]
-    GameObject[] myCustomers;
+    public GameObject[] myCustomers;
     public static GameManager instance;
     public bool isPlaying = true;
     public bool waiting = true;
@@ -120,7 +120,9 @@ public class GameManager : MonoBehaviour
         {
             r.items.Add(ingredients[Random.Range(0, ingredients.Length)]);
         }
+        Invoke("BeginOrder", 1);
         return r;
+
     }
 
     /// <summary>
@@ -128,13 +130,27 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void BeginOrder() {
         GameObject obj = customers.Peek().gameObject;
+        drivethru.instance.StartList(obj.GetComponent<Customer>().currentRecipe.items);
+        whiteBoardText.text = ""; //resets board
         for (int i = 0; i < obj.GetComponent<Customer>().currentRecipe.items.Count; i++) {
-            whiteBoardText.text += obj.GetComponent<Customer>().currentRecipe.items[i].ToString() + " ";
+            whiteBoardText.text += obj.GetComponent<Customer>().currentRecipe.items[i].myName.ToString() + ", ";
         }
     }
+
+    /// <summary>
+    /// Called after given a box of any sort. Good or bad. 
+    /// </summary>
+    public void NextOrder() {
+        if (customers.Count > 1) {
+            customers.Dequeue();
+            BeginOrder();
+        }
+    }
+
     void spawnCustomer()
     {
         int i = Random.Range(0, myCustomers.Length - 1);
+        print(i);
         GameObject obj = Instantiate(myCustomers[i], spawnPoint.position, this.transform.localRotation);
         customers.Enqueue(obj);
         waiting = true;

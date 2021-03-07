@@ -6,6 +6,7 @@ public class drivethru : MonoBehaviour
 {
     public List<Item> newItems = new List<Item>();
     public static drivethru instance;
+    public SortingLayer layer;
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -16,6 +17,7 @@ public class drivethru : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.gameObject.layer == 12) {
             //if it is a box
+            print("HI THERE");
             if (CheckBox(collision.collider.gameObject.GetComponent<box>().items)) {
                 //good box
                 print("This was a good box");
@@ -23,6 +25,7 @@ public class drivethru : MonoBehaviour
                 //bad box
                 print("This was a bad box");
             }
+            GameManager.instance.NextOrder();
             Destroy(collision.collider.gameObject);    
         }
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a2c6e32eb755148a87041b4dc97614, type: 3}
   m_Name: Chicken
   m_EditorClassIdentifier: 
-  myName: 
+  myName: Chicken
   description: 
   points: 0
   quality: 0
