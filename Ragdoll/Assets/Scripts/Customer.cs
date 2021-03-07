@@ -51,7 +51,7 @@ public class Customer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (patienceTimer <= 0 && !isSated)
+        if ((patienceTimer <= 0 && !isSated) || isAngry)
         {
             isAngry = true;
             PlaySound(GameManager.instance.bad,false);
