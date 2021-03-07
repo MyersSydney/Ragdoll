@@ -26,6 +26,14 @@ public class GameManager : MonoBehaviour
     public int maxCustomers = 5;
     [SerializeField]
     public static Queue<GameObject> customers = new Queue<GameObject>();
+    [SerializeField]
+    Recipe[] recipes;
+    [SerializeField]
+    Item[] ingredients;
+    [SerializeField]
+    Item[] bun;
+    [SerializeField]
+    Item[] meats;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +95,22 @@ public class GameManager : MonoBehaviour
         money = initialMoney;
         currentMoney = money;
 
+    }
+    public Recipe GetRecipe()
+    {
+        return recipes[Random.Range(0, recipes.Length)];
+    }
+    public Recipe CreateOrder()
+    {
+        Recipe r = new Recipe();
+        int max = Random.Range(5, 10);
+        r.items.Add(bun[Random.Range(0, bun.Length)]);
+        r.items.Add(meats[Random.Range(0, meats.Length)]);
+        for (int i = 0; i < max; i++)
+        {
+            r.items.Add(ingredients[Random.Range(0, ingredients.Length)]);
+        }
+        return r;
     }
     void spawnCustomer()
     {

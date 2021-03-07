@@ -16,6 +16,8 @@ public class Customer : MonoBehaviour
     {
         goPoint = GameObject.FindGameObjectWithTag("GoPoint").transform;
         theGreatBeyond = GameObject.FindGameObjectWithTag("theBeyond").transform;
+        /*currentRecipe = GameManager.instance.GetRecipe();*/
+        currentRecipe = GameManager.instance.CreateOrder();
     }
 
     // Update is called once per frame
