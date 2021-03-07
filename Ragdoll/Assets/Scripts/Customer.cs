@@ -25,6 +25,7 @@ public class Customer : MonoBehaviour
         theGreatBeyond = GameObject.FindGameObjectWithTag("theBeyond").transform;
         /*currentRecipe = GameManager.instance.GetRecipe();*/
         currentRecipe = GameManager.instance.CreateOrder();
+        
         audio = GetComponent<AudioSource>();
         if (GameManager.instance.kelpRating > 0.6)
             modifier = .4f;

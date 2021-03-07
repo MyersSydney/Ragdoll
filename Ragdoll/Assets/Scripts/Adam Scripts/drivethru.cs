@@ -5,10 +5,13 @@ using UnityEngine;
 public class drivethru : MonoBehaviour
 {
     public List<Item> newItems = new List<Item>();
-    public Recipe recipe;
-
-    private void Start() {
-        StartList(recipe.items);
+    public static drivethru instance;
+    private void Awake() {
+        if(instance == null) {
+            instance = this;
+        } else {
+            Destroy(this);
+        }
     }
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.gameObject.layer == 12) {
@@ -20,13 +23,13 @@ public class drivethru : MonoBehaviour
                 //bad box
                 print("This was a bad box");
             }
-            Destroy(collision.collider.gameObject);
-            //newItems.Clear();
+            Destroy(collision.collider.gameObject);    
         }
     }
 
-    void StartList(List<Item> items) {
-        for(int i = 0; i < items.Count; i++) {
+    public void StartList(List<Item> items) {
+        newItems.Clear();
+        for (int i = 0; i < items.Count; i++) {
             newItems.Add(items[i]);
         }
     }
