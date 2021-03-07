@@ -41,9 +41,13 @@ public class pickUpObjects : MonoBehaviour
                         obj.GetComponent<Rigidbody>().drag = 100;
                         obj.transform.localPosition = Vector3.zero;
                         isHolding = true;
+                    } else if (hit.collider.gameObject.CompareTag("FridgeItem")) {
+                        //you are picking something from the fridge
+                        GameObject obj = hit.collider.gameObject;
+                        obj.GetComponent<fridgeItem>().PurchaseItem();
                     }
                 } 
-            } else {
+            } else { //Drop item
                 GameObject obj = objects[0].gameObject;
                 obj.GetComponent<Rigidbody>().useGravity = true;
                 obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
@@ -54,7 +58,7 @@ public class pickUpObjects : MonoBehaviour
 
 
             }
-        } else if (Input.GetMouseButtonDown(1)) {
+        } else if (Input.GetMouseButtonDown(1)) { //chuck item at shark
             GameObject obj = objects[0].gameObject;
             obj.GetComponent<Rigidbody>().useGravity = true;
             obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
@@ -78,6 +82,17 @@ public class pickUpObjects : MonoBehaviour
 
     }
 
+    public void PickUpFromFridge(GameObject obj) {
+        obj.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        obj.GetComponent<Rigidbody>().useGravity = false;
+        obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        obj.transform.parent = handLocation.transform;
+
+        obj.GetComponent<Rigidbody>().drag = 100;
+        obj.transform.localPosition = Vector3.zero;
+        isHolding = true;
+        objects.Add(obj);
+    }
 }
 
 
