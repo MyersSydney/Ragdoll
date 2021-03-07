@@ -131,6 +131,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 1717728669382285021, guid: 0685b887d1a02aa4d99c6c6a0f8c896e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 656.61
@@ -242,6 +243,8 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 49774fe (sssssssss AHHHHHHHHHHHH)
 =======
 >>>>>>> parent of 49774fe (sssssssss AHHHHHHHHHHHH)
     - target: {fileID: 1717728670044273946, guid: 0685b887d1a02aa4d99c6c6a0f8c896e, type: 3}
