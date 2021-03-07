@@ -45,6 +45,9 @@ public class pickUpObjects : MonoBehaviour
                         //you are picking something from the fridge
                         GameObject obj = hit.collider.gameObject;
                         obj.GetComponent<fridgeItem>().PurchaseItem();
+                    } else if (hit.collider.gameObject.CompareTag("FryButton")) {
+                        GameObject obj = hit.collider.gameObject;
+                        obj.GetComponent<fryMachine>().FryShoot();
                     }
                 } 
             } else { //Drop item
