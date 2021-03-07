@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 1442723786}
   m_Layer: 0
   m_Name: spawnPoint
-  m_TagString: customerSpawn
+  m_TagString: GoPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
