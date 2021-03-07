@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public float chanceSpawnMax = 100;
     public float downTime = 30;
     public int maxCustomers = 5;
-    Queue<GameObject> customers = new Queue<GameObject>();
+    public Queue<GameObject> customers = new Queue<GameObject>();
     // Start is called before the first frame update
     void Start()
     {

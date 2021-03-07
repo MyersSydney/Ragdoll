@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1253858511634314001}
   - component: {fileID: 5350761693075781082}
   - component: {fileID: 7794730760505916892}
+  - component: {fileID: 4821284825524987468}
   m_Layer: 0
   m_Name: pickels
   m_TagString: Pickup
@@ -114,3 +115,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4821284825524987468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749398385286419140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca91bb470f380c1488e3f90f17717511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 0c4faf954dee00943acaadc33d21ae70, type: 2}

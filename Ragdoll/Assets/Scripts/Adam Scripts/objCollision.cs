@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class objCollision : MonoBehaviour
 {
+    public Item item;
     private void Start() {
         Physics.IgnoreLayerCollision(this.gameObject.layer, 11);
     }

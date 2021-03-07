@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8174990736899331804}
   - component: {fileID: 282353071956492189}
   - component: {fileID: 1873278830560043458}
+  - component: {fileID: -6737436817292029591}
   m_Layer: 0
   m_Name: cheese
   m_TagString: Pickup
@@ -112,3 +113,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.00036404844}
   m_Center: {x: 0, y: 0, z: 0.00018202422}
+--- !u!114 &-6737436817292029591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670644684272826121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca91bb470f380c1488e3f90f17717511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 306469f6cc54bae4a8c54057f3514ee1, type: 2}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Recipe currentRecipe;
     void Start()
     {
         
