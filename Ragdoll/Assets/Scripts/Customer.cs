@@ -54,14 +54,15 @@ public class Customer : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,30, custard))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 30, custard))
         {
             print(hit);
-/*            if(hit.collider.CompareTag("customer"))
-            {*/
-                moving = false;
-           /* }*/
+            /*            if(hit.collider.CompareTag("customer"))
+                        {*/
+            moving = false;
+            /* }*/
         }
+        else moving = true;
         if ((patienceTimer <= 0 && !isSated) || isAngry)
         {
             isAngry = true;
