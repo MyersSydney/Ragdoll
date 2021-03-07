@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public float money;
@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     public AudioClip good;
     [SerializeField]
     public AudioClip custArrive;
+    
+    [Header("Whiteboard")]
+    public TextMeshPro whiteBoardText;
+
     // Start is called before the first frame update
     void Awake()
     {
