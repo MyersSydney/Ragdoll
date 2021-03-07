@@ -7,6 +7,7 @@ public class drivethru : MonoBehaviour
     public List<Item> newItems = new List<Item>();
     public static drivethru instance;
     public SortingLayer layer;
+    public float profit = 0;
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -27,6 +28,12 @@ public class drivethru : MonoBehaviour
                 print("This was a bad box");
                 GameManager.customers.Peek().GetComponent<Customer>().isAngry = true;
             }
+            foreach (Item i in newItems)
+            {
+                profit += i.price;
+            }
+            profit *= 1.2f;
+            GameManager.instance.currentMoney += profit;
             GameManager.instance.NextOrder();
             Destroy(collision.collider.gameObject);    
         }

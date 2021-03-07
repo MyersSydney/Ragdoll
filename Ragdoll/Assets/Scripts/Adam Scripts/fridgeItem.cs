@@ -11,6 +11,7 @@ public class fridgeItem : MonoBehaviour
 
     private void Start() {
         player = GameObject.Find("player");
+        price = foodItem.GetComponent<Item>().price;
     }
 
     private void Update() {
