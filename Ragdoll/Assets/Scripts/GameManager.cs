@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Transform spawnPoint;
     [SerializeField]
-    GameObject customer;
+    GameObject[] myCustomers;
     public static GameManager instance;
     public bool isPlaying = true;
     public bool waiting = true;
@@ -110,8 +110,8 @@ public class GameManager : MonoBehaviour
     {
         Recipe r = (Recipe)ScriptableObject.CreateInstance("Recipe");
         int max = Random.Range(5, 10);
-        r.items.Add(bun[Random.Range(0, bun.Length)]);
-        r.items.Add(meats[Random.Range(0, meats.Length)]);
+        r.items.Add(bun[Random.Range(0, bun.Length- 1)]);
+        r.items.Add(meats[Random.Range(0, meats.Length -1)]);
         for (int i = 0; i < max; i++)
         {
             r.items.Add(ingredients[Random.Range(0, ingredients.Length)]);
@@ -120,7 +120,8 @@ public class GameManager : MonoBehaviour
     }
     void spawnCustomer()
     {
-        GameObject obj = Instantiate(customer, spawnPoint.position, this.transform.localRotation);
+        int i = Random.Range(0, myCustomers.Length - 1);
+        GameObject obj = Instantiate(myCustomers[i], spawnPoint.position, this.transform.localRotation);
         customers.Enqueue(obj);
         waiting = true;
     }

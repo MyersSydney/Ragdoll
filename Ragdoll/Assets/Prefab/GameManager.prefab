@@ -50,7 +50,12 @@ MonoBehaviour:
   initialKelp: 0.5
   initialMoney: 500
   spawnPoint: {fileID: 0}
-  customer: {fileID: 4293926133991764339, guid: d77e35fcc3fe3a144bf761f719a9ebc0, type: 3}
+  customer:
+  - {fileID: 2877263614517002543, guid: 97bd8ea2a93c2dc43a65c08dc4b36ed9, type: 3}
+  - {fileID: 6156067390751335161, guid: 743427f757026be4e9c28ab5835221c0, type: 3}
+  - {fileID: 7780349476855831941, guid: 2dfc2b10117510841ad7db653d1038c1, type: 3}
+  - {fileID: 642459720904847665, guid: 78407a9c5857b95448d071fd73e5e639, type: 3}
+  - {fileID: 5173695491658745935, guid: ad47893a2dbd0dd4ab83bccaefa625b5, type: 3}
   isPlaying: 1
   waiting: 0
   isSpawning: 1
@@ -74,3 +79,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3a221edfca93de43958b13dd788377b, type: 2}
   - {fileID: 11400000, guid: c71ccba824b03ae40850bfe16fd67095, type: 2}
   - {fileID: 11400000, guid: 0fefb7fc36ca0b7468b8fbd4a53c2ff8, type: 2}
+  bad: {fileID: 8300000, guid: da2a4bd28b2403a44bd5c7b67c9b9298, type: 3}
+  good: {fileID: 8300000, guid: 38e166fa3f1800d4082209d7bb5886b0, type: 3}
+  custArrive: {fileID: 8300000, guid: db7bb878334d3d243bf231c48366a8a1, type: 3}
