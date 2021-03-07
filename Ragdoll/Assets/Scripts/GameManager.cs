@@ -34,8 +34,14 @@ public class GameManager : MonoBehaviour
     Item[] bun;
     [SerializeField]
     Item[] meats;
+    [SerializeField]
+    public AudioClip bad;
+    [SerializeField]
+    public AudioClip good;
+    [SerializeField]
+    public AudioClip custArrive;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance == null)
             instance = this;
@@ -102,7 +108,7 @@ public class GameManager : MonoBehaviour
     }
     public Recipe CreateOrder()
     {
-        Recipe r = new Recipe();
+        Recipe r = (Recipe)ScriptableObject.CreateInstance("Recipe");
         int max = Random.Range(5, 10);
         r.items.Add(bun[Random.Range(0, bun.Length)]);
         r.items.Add(meats[Random.Range(0, meats.Length)]);
@@ -115,12 +121,10 @@ public class GameManager : MonoBehaviour
     void spawnCustomer()
     {
         GameObject obj = Instantiate(customer, spawnPoint.position, this.transform.localRotation);
-        print(obj);
         customers.Enqueue(obj);
-        print(customers.Peek());
         waiting = true;
     }
-    public void ModifyRating(Item i, float time)
+    public void ModifyRating(Item i, float time, bool isMeat)
     {
         switch (i.quality)
         {
@@ -135,10 +139,7 @@ public class GameManager : MonoBehaviour
 
                 break;
             case Item.Quality.good:
-                if (i.GetType() == typeof(Meat))
-                {
 
-                }
                 break;
             case Item.Quality.poor:
 
